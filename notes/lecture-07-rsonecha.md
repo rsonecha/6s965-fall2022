@@ -62,7 +62,7 @@
 **NASNET cell-level search space**
 - Uses an RNN to generate a candidate cell through 5 steps: 1-2. Choose two inputs, 3-4. Choose two input transformations, 5. combine the results.
 - These five steps are repeated B times to build the whole network.
-- ![Cell-level Search][figures/lecture-07/rsonecha/cell_nas.png]
+- ![Cell-level Search](figures/lecture-07/rsonecha/cell_nas.png)
 - What is the size of this search space? $(2*2*M*M*N)^B$. For M=5, N=2, B=5 the there would be $3.2 * 10^{11}$ candidates in the search space.
 - Challenges with NASNET:
   - The cost of collecting feedback is very high because it requires training many neural networks.
