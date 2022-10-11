@@ -2,7 +2,7 @@
 
 ## Note Information
 
-| Title       | Quantization Part II                                                                                            |
+| Title       | Neural Architecture Search (Part I)                                                                                            |
 |-------------|-----------------------------------------------------------------------------------------------------------------|
 | Lecturer    | Song Han                                                                                                        |
 | Date        | 09/29/2022                                                                                                      |
