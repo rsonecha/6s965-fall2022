@@ -39,7 +39,7 @@
 - **MobileNet:** Introduces the depthwise-separable convolution layer.
   - A *depthwise convolution* is one where the group size is equal to the number of input channels. In order to fuse data across channels, they add an additional 1x1 convolution.
   - (image [source](https://www.researchgate.net/figure/Depthwise-separable-convolutions_fig1_358585116))
-    ![MobileNet][figures/lecture-07/rsonecha/mobilenet.png]
+    ![MobileNet](figures/lecture-07/rsonecha/mobilenet.png)
 - **MobileNetV2:** Improves the performance of depthwise convolutions by increasing the number of input and output channels.
   - Since increasing the input and output channel sizes of a depthwise convolution only increases the number of parameters linearly, this is still an affordable cost.
 - **SuffleNet:** Further reduces cost by replacing the 1x1 convolution with a 1x1 group convolution.
