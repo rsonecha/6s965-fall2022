@@ -1,4 +1,4 @@
-# Lecture 06: Neural Architecture Search Part I
+# Lecture 06: Neural Architecture Search (Part I)
 
 ## Note Information
 
