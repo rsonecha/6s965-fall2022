@@ -107,3 +107,18 @@
   - GANs are more expensive than recognition models
       - GAN Compression + Distillation
         - Automated model surgery: NAS for automated channel reduction
+      - Anycost GAN: train the model to produce consistent results at different resolutions and channel depths
+        - Problem 1: inconsistency between subnets -- resolved by incorporating distillation loss
+          - ![Distillation Loss](figures/lecture-19/rsonecha/dist_loss.png)
+        - Problem 2: high FID (Frechet Inception Distance) for some subnets -- resolved by using a G-coordinated discriminator
+          - ![G-coordinated Discriminator](figures/lecture-19/rsonecha/G_coord.png)
+      - Spatially Sparse Inference: take advantage of spatial redundancy and update only the edited region and reuse the cached activations for unedited regions
+        - ![Sparse Inference](figures/lecture-19/rsonecha/sparse_inference.png)
+        - Sparse Incremental Generative Engine (SIGE) is a specialized system to realize the theoretical savings/acceleration on different hardware settings
+        - SIGE uses tiling based sparse convolutions. The process requires precomputing the original image stream, using a difference mask to identify edited regions, breaking the mask into small blocks to identify active indices, and scattering the output blocks into the original activation.
+        - ![Sparse Convolution](figures/lecture-19/rsonecha/sparse_conv.png)
+      - Differentiable Augmentation (Data-efficient GANs)
+        - Big data is super expensive and GAN models deteriorate heavily with limited data
+        - Differentiable augmentation involves augmenting the reals and fakes for both the discriminator and generator
+        - Unlike other approaches, differentiable augmentation does not run into issues with unbalanced optimization or artifacts
+        - ![Differentiable Augmentation](figures/lecture-19/rsonecha/diff_aug.png)
